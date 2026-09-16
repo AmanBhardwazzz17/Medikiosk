@@ -1,0 +1,136 @@
+/**
+ * MediKiosk — Unified Glassmorphism Design Tokens
+ * Dark-glass-first design system. All surfaces are frosted glass
+ * on top of a single animated mesh-gradient background.
+ */
+
+:root {
+  /* === GLOBAL CANVAS === */
+  --medi-bg: #0A0F1E;
+  --medi-bg-subtle: #0F1628;
+
+  /* === GLASS SURFACES === */
+  --medi-glass-primary: rgba(255, 255, 255, 0.05);
+  --medi-glass-elevated: rgba(255, 255, 255, 0.08);
+  --medi-glass-card: rgba(255, 255, 255, 0.06);
+  --medi-glass-hover: rgba(255, 255, 255, 0.10);
+  --medi-glass-active: rgba(99, 102, 241, 0.15);
+  
+  /* Legacy surface names mapped to glass */
+  --medi-surface-card: rgba(255, 255, 255, 0.06);
+  --medi-surface-elevated: rgba(255, 255, 255, 0.10);
+  --medi-surface-sunken: rgba(0, 0, 0, 0.25);
+  --medi-surface-glass: rgba(255, 255, 255, 0.06);
+  --medi-surface-glass-border: rgba(255, 255, 255, 0.12);
+
+  /* === GLASS BORDERS === */
+  --medi-border-glass: 1px solid rgba(255, 255, 255, 0.12);
+  --medi-border-glass-strong: 1px solid rgba(255, 255, 255, 0.20);
+  --medi-border-soft: 1px solid rgba(255, 255, 255, 0.08);
+  --medi-border-subtle: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* === GLASS BLUR === */
+  --medi-blur-sm: blur(12px);
+  --medi-blur-md: blur(20px);
+  --medi-blur-lg: blur(40px);
+
+  /* === SHADOWS & GLOWS === */
+  --medi-shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --medi-shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --medi-shadow-floating: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --medi-shadow-glow-primary: 0 0 24px rgba(99, 102, 241, 0.4), 0 8px 32px rgba(0, 0, 0, 0.4);
+  --medi-shadow-glow-cyan: 0 0 24px rgba(6, 182, 212, 0.4), 0 8px 32px rgba(0, 0, 0, 0.4);
+  --medi-shadow-glow-alert: 0 0 24px rgba(239, 68, 68, 0.5), 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* Legacy shadow names */
+  --medi-neumorph-raised: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+  --medi-neumorph-card: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+  --medi-neumorph-floating: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08);
+  --medi-neumorph-inset: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+  --medi-neumorph-btn-pressed: inset 0 2px 8px rgba(0, 0, 0, 0.5);
+  --medi-inner-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+  /* === ACCENT GRADIENTS === */
+  --medi-gradient-primary: linear-gradient(135deg, #6366F1 0%, #06B6D4 100%);
+  --medi-gradient-secondary: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  --medi-gradient-warm: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+  --medi-gradient-ayush: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+  --medi-gradient-hologram: linear-gradient(135deg, #EC4899 0%, #8B5CF6 50%, #06B6D4 100%);
+  --medi-gradient-pink: linear-gradient(135deg, #EC4899 0%, #F97316 100%);
+  --medi-gradient-cyan: linear-gradient(135deg, #06B6D4 0%, #10B981 100%);
+  --medi-gradient-alert: linear-gradient(135deg, #EF4444 0%, #F97316 100%);
+  --medi-gradient-orb: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.15) 0%, rgba(99,102,241,0.6) 50%, rgba(6,182,212,0.8) 100%);
+
+  /* === ACCENT COLORS === */
+  --medi-primary: #6366F1;
+  --medi-primary-light: #818CF8;
+  --medi-cyan: #06B6D4;
+  --medi-pink: #EC4899;
+  --medi-emerald: #10B981;
+  --medi-amber: #F59E0B;
+  --medi-red: #EF4444;
+
+  /* Legacy names */
+  --medi-surface-sunken: rgba(0, 0, 0, 0.3);
+
+  /* === TYPOGRAPHY & FONTS === */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-mono: 'Space Grotesk', ui-monospace, monospace;
+  --medi-text-primary: #F1F5F9;
+  --medi-text-secondary: #94A3B8;
+  --medi-text-muted: #64748B;
+  --medi-text-dark: #FFFFFF;
+
+  /* === INPUT WELLS & NAVBAR (DARK DEFAULTS) === */
+  --medi-navbar-bg: rgba(10, 15, 30, 0.85);
+  --medi-navbar-border: 1px solid rgba(255, 255, 255, 0.12);
+  --medi-navbar-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --medi-input-bg: rgba(0, 0, 0, 0.28);
+  --medi-input-border: 1px solid rgba(255, 255, 255, 0.10);
+
+  /* === RADII === */
+  --medi-radius-sm: 12px;
+  --medi-radius-md: 16px;
+  --medi-radius-lg: 24px;
+  --medi-radius-xl: 32px;
+  --medi-radius-full: 9999px;
+
+  /* === TRANSITIONS === */
+  --medi-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --medi-ease: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light theme override — glass on light background */
+[data-theme="light"] {
+  --medi-bg: #F4F7FE;
+  --medi-bg-subtle: #E9EEFA;
+  --medi-glass-primary: rgba(255, 255, 255, 0.75);
+  --medi-glass-elevated: rgba(255, 255, 255, 0.90);
+  --medi-glass-card: rgba(255, 255, 255, 0.80);
+  --medi-glass-hover: rgba(255, 255, 255, 0.95);
+  --medi-surface-card: rgba(255, 255, 255, 0.85);
+  --medi-surface-elevated: rgba(255, 255, 255, 0.92);
+  --medi-surface-glass: rgba(255, 255, 255, 0.80);
+  --medi-surface-glass-border: rgba(99, 102, 241, 0.20);
+  --medi-border-glass: 1px solid rgba(99, 102, 241, 0.20);
+  --medi-border-glass-strong: 1px solid rgba(99, 102, 241, 0.30);
+  --medi-border-soft: 1px solid rgba(99, 102, 241, 0.12);
+  --medi-border-subtle: 1px solid rgba(99, 102, 241, 0.08);
+  --medi-shadow-card: 0 8px 32px rgba(99, 102, 241, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  --medi-shadow-floating: 0 16px 48px rgba(99, 102, 241, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.9);
+  --medi-neumorph-raised: 0 8px 32px rgba(99,102,241,0.10), inset 0 1px 0 rgba(255,255,255,0.95);
+  --medi-neumorph-card: 0 8px 32px rgba(99,102,241,0.10), inset 0 1px 0 rgba(255,255,255,0.95);
+  --medi-neumorph-floating: 0 16px 48px rgba(99,102,241,0.14), 0 0 0 1px rgba(255,255,255,0.9);
+  --medi-neumorph-inset: inset 0 2px 6px rgba(99,102,241,0.08);
+  --medi-text-primary: #0F172A;
+  --medi-text-secondary: #334155;
+  --medi-text-muted: #64748B;
+  --medi-text-dark: #0F172A;
+  --medi-surface-sunken: rgba(255, 255, 255, 0.90);
+  --medi-input-bg: rgba(255, 255, 255, 0.92);
+  --medi-input-border: 1px solid rgba(99, 102, 241, 0.22);
+  --medi-navbar-bg: rgba(255, 255, 255, 0.88);
+  --medi-navbar-border: 1px solid rgba(99, 102, 241, 0.20);
+  --medi-navbar-shadow: 0 8px 32px rgba(99, 102, 241, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
