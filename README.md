@@ -17,118 +17,10 @@
   <img src="https://img.shields.io/badge/Vite-6.2.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
 </p>
 
-<!-- Live Animated Pulse & Doctor-Patient Stethoscope Monitoring Visual -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 130" width="100%" height="130" style="background: radial-gradient(circle at 50% 50%, #0c1527 0%, #050b14 100%); border-radius: 16px; border: 1px solid rgba(56, 189, 248, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
-  <defs>
-    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.1"/>
-      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#22c55e" stop-opacity="1"/>
-      <stop offset="75%" stop-color="#a855f7" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
-    </linearGradient>
-    <linearGradient id="glowPulse" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ef4444" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ef4444" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-
-  <style>
-    .grid-line { stroke: rgba(56, 189, 248, 0.08); stroke-width: 1; }
-    .ecg-track {
-      stroke: url(#cyberCyan);
-      stroke-width: 2.5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 2000;
-      stroke-dashoffset: 2000;
-      animation: drawECG 4s linear infinite;
-      filter: url(#neonGlow);
-    }
-    .scanner-dot {
-      fill: #22c55e;
-      filter: url(#neonGlow);
-      animation: moveScanner 4s linear infinite;
-    }
-    .pulse-text {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.8px;
-      fill: #38bdf8;
-      animation: blinkText 2s ease-in-out infinite;
-    }
-    @keyframes drawECG {
-      0% { stroke-dashoffset: 2000; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes moveScanner {
-      0% { cx: 40px; cy: 65px; opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { cx: 960px; cy: 65px; opacity: 0; }
-    }
-    @keyframes blinkText {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 0.3; }
-    }
-  </style>
-
-  <!-- Background Grid -->
-  <line x1="0" y1="35" x2="1000" y2="35" class="grid-line" />
-  <line x1="0" y1="65" x2="1000" y2="65" class="grid-line" stroke-dasharray="4,4" />
-  <line x1="0" y1="95" x2="1000" y2="95" class="grid-line" />
-  <line x1="200" y1="0" x2="200" y2="130" class="grid-line" />
-  <line x1="400" y1="0" x2="400" y2="130" class="grid-line" />
-  <line x1="600" y1="0" x2="600" y2="130" class="grid-line" />
-  <line x1="800" y1="0" x2="800" y2="130" class="grid-line" />
-
-  <!-- Animated ECG Line -->
-  <path class="ecg-track" d="
-    M 30,65 L 120,65 
-    L 130,55 L 140,75 L 150,65 
-    L 200,65 
-    L 210,60 L 220,15 L 235,115 L 248,50 L 258,68 L 268,65 
-    L 340,65 
-    L 355,50 L 375,65 
-    L 450,65 
-    L 460,60 L 470,20 L 485,110 L 498,48 L 508,68 L 518,65 
-    L 600,65 
-    L 615,55 L 625,75 L 635,65 
-    L 710,65 
-    L 720,60 L 730,18 L 745,112 L 758,52 L 768,68 L 778,65 
-    L 850,65 
-    L 865,52 L 885,65 
-    L 970,65
-  " />
-
-  <!-- Scanning Indicator Dot -->
-  <circle class="scanner-dot" r="4" cx="40" cy="65" />
-
-  <!-- Overlay Metrics Badge -->
-  <g transform="translate(45, 25)">
-    <rect width="180" height="24" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.3)" />
-    <circle cx="12" cy="12" r="4" fill="#22c55e" />
-    <text x="24" y="16" fill="#e2e8f0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">TRIAGE ENGINE: ACTIVE</text>
-  </g>
-
-  <g transform="translate(775, 25)">
-    <rect width="180" height="24" rx="6" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(168, 85, 247, 0.3)" />
-    <circle cx="12" cy="12" r="4" fill="#a855f7" />
-    <text x="24" y="16" fill="#e2e8f0" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" font-weight="600">FHIR R4 BUNDLE: READY</text>
-  </g>
-
-  <text x="500" y="118" text-anchor="middle" class="pulse-text">● REAL-TIME MULTILINGUAL CLINICAL INGESTION &amp; RED-FLAG DETECTION PIPELINE ●</text>
-</svg>
+<!-- Live Animated Pulse & Telemetry Waveform -->
+<p align="center">
+  <img src="./assets/heartbeat.svg" width="100%" alt="MediKiosk Live Telemetry ECG Waveform" />
+</p>
 
 <p align="center">
   <b>MediKiosk</b> solves the catastrophic bottleneck in Indian hospital OPDs. By leveraging <b>Voice AI (Bhashini)</b>, <b>OCR Prescription Digitization</b>, <b>SOCRATES + AYUSH Clinical Knowledge Structuring</b>, and <b>ABDM HL7 FHIR Interoperability</b>, MediKiosk cuts patient intake latency from <b>15 minutes to under 2.5 minutes</b> while safeguarding patient lives through automated red-flag triage.
@@ -295,6 +187,11 @@ sequenceDiagram
 ---
 
 ## 📸 Product Working Showcase & Module Breakdown
+
+<!-- Live Animated Clinical Workflow & Stethoscope Monitoring Telemetry -->
+<p align="center">
+  <img src="./assets/doctor_patient_workflow.svg" width="100%" alt="MediKiosk Autonomous Clinical Intake to Doctor Consultation Workflow" />
+</p>
 
 ### Module 1: Patient Kiosk Onboarding & ABHA QR Scanner
 - **Zero-Barrier Entrance**: Designed with 80px high-contrast touch targets, bilingual iconography, and crystal glassmorphism for outdoor hospital environments.
